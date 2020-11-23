@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">{%load static%}
+    <link rel="stylesheet" href="{%static 'tmp/resume.css'%}">{%load static%}
+    <script src="{%static 'tmp/jquery.js'%}"></script>{%load static%}
+    <script src="{%static 'tmp/resume1.js'%}"></script>
+    <title>Resume structure</title>
+</head>
+
+<body>
+    <div class="lefthalf">
+        <div class="infog">
+            <h1>Personal data</h1>
+            <form action="#" class="self_info">
+                <label for="fname">First name</label>
+                <input type="text" name="fname" id="fname" value="john" required><br>
+                <label for="lname">Last name</label>
+                <input type="text" name="lname" id="lname" value="doe" required><br>
+                <label for="email">Email</label>
+                <input type="email" name="mail" id="mail" value="john@xyz.abc" required> <br>
+                <label for="no">Contactno.</label>
+                <input type="tel" name="no" id="no" value="1234567891" required> <br>
+                <label for="add">Address</label>
+                <input type="text" name="add" id="add" value="jhansi Uttar pradesh" required> <br>
+                <label for="pin">Pincode</label>
+                <input type="text" name="pin" id="pin" value="908484" required> <br>
+            </form>
+            <button id="b1">Skills</button>
+        </div>
+        <div class="skg">
+            <h1>Skills</h1>
+            <p>
+                if you want to put your two or more skill provide ; between them <br>
+                example:sales analysis; projects scheduling; communication skills ; more in a row
+            </p>
+            <form action="#" class="SKILLS">
+                <label for="skl">Skills</label>
+                <input type="text" name="skl" id="skl" required><br>
+            </form>
+            <button id="b21">fill again</button>
+            <button id="b22">next for technology</button>
+        </div>
+        <div class="sfg">
+            <h1>Software / technologies</h1>
+            <p>
+                if you want to put your two or more software or technology provide ; between them <br>
+                example:CSS; HTML; javascripts ; more in a row
+            </p>
+            <form action="#" class="Sft">
+                <label for="skt">Software</label>
+                <input type="text" name="skt" id="skt" required><br>
+            </form>
+            <button id="b31">fill again</button>
+            <button id="b32">next for languages </button>
+        </div>
+        <div class="lng">
+            <h1>Languages</h1>
+            <p>
+                if you want to put your two or more languages provide ; between them <br>
+                example:English; Hindi; Punjabi ; more in a row
+            </p>
+            <form action="#" class="slng">
+                <label for="langs">Language</label>
+                <input type="text" name="langs" id="langs" required><br>
+            </form>
+            <button id="b4">next</button>
+        </div>
+        <div class="defi">
+            <h1>About yourself</h1>
+            <p>
+                try to write about yourself
+            </p>
+            <form action="#" class="defig">
+                <input type="text" name="defig" id="defig" required><br>
+            </form>
+            <button id="b5">next for expirences</button>
+        </div>
+        <div class="expi">
+            <h1>Write your expirences</h1>
+            <p>
+                In achievement section for two or more achievemnt put ; between them <br>
+                if your are in currently in that job then left last date column empty.
+            </p>
+            <form action="#" class="expig">
+                <label for="job">Job Name</label>
+                <input type="text" name="job" , id="job" required>
+                <label for="sdate">Starting date of job</label>
+                <input type="date" required name="sdate" id="sdate">
+                <label for="ldate">last date of job</label>
+                <input type="date" name="ldate" id="ldate">
+                <label for="expig">Achievements</label>
+                <input type="text" name="expig" id="expig" required><br>
+            </form>
+            <button id="b61">more on expirences</button>
+            <button id="b62">next for education</button>
+        </div>
+        <div class="edu">
+            <h1>Write about your Education</h1>
+            <form action="#" class="edug">
+                <label for="edu">Education detail</label>
+                <input type="text" name="edu" , id="edu" required>
+                <label for="sdatee">Starting date of course</label>
+                <input type="date" required name="sdatee" id="sdatee">
+                <label for="ldatee">last date of course</label>
+                <input type="date" name="ldatee" id="ldatee" required>
+                <label for="edug">Education achieved</label>
+                <input type="text" name="edug" id="edug" required><br>
+            </form>
+            <button id="b71">more on education</button>
+            <button id="b72">next for certificates</button>
+        </div>
+        <div class="cer">
+            <h1>Write about your Certificates</h1>
+            <form action="#" class="cerg">
+                <label for="cer">Certificate detail</label>
+                <input type="text" name="cer" , id="cer" required>
+                <label for="sdatec">date of Certificate</label>
+                <input type="date" required name="sdatec" id="sdatec">
+            </form>
+            <button id="b81">more on certificates</button>
+            <button id="b82">next for interset</button>
+        </div>
+        <div class="ins">
+            <h1>Write about your Interests</h1>
+            <form action="#" class="insg">
+                <label for="ins">Interests</label>
+                <input type="text" name="ins" , id="ins" required>
+            </form>
+            <button id="b9">Done</button>
+        </div>
+    </div>
+    <div class="righthalf">
+        <div class="right_left">
+            <p class="fullname"></p>
+            <div class="btags">
+                <h3>Personal Info</h3>
+                <p class="mtags">Address</p>
+                <p id="addr"></p>
+                <p class="mtags">Phone </p>
+                <p id="pno"></p>
+                <p class="mtags">E-mail </p>
+                <p id="email"></p>
+                <h3>Skills</h3>
+                <p id="sinfo"></p>
+                <h3>Software</h3>
+                <p id="sfinfo"> </p>
+                <h3>Languages</h3>
+                <p id="linfo"></p>
+            </div>
+
+
+        </div>
+        <div class="right_right">
+            <p id="infotxt">Here you can put some detail about you</p>
+            <div class="dataa">
+            <p class="ntags">Experience</p>
+            <div id="infoexpl" class="datal">l</div>
+            <div id="infoexpr" class="datar"></div>
+        </div>
+        <div class="dataa">
+            <p class="ntags">Education</p>
+            <div id="infoedul" class="datal"></div>
+            <div id="infoedur" class="datar"></div>
+        </div>
+        <div class="dataa">
+            <p class="ntags">Certificate</p>
+            <div id="infocerl" class="datal"></div>
+            <div id="infocerr" class="datar"></div>
+        </div>
+        <div class="dataa">
+            <p class="ntags">Interests</p>
+            <div id="infoinsl" class="datal"></div>
+            <div id="infoinsr" class="datar"></div>
+        </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
