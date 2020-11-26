@@ -18,16 +18,17 @@
               direction: block;
               width: 100%;
               backface-visibility: visible;
-              color: whitesmoke;
+              color: black;
               font-size: 40px;
           }
           nav{
+              opacity: 0.5;
               position: absolute;
               z-index: 15;
               bottom: -4rem;
           }
           img{
-              opacity: 0.5;
+
               height: 610px;
           }
 
@@ -77,22 +78,22 @@
   <div class="carousel-inner">
 
     <div class="carousel-item active">{% load static%}
-        <img src="{% static 'tmp/photos/385eaae8e33cc1448ade00c532ea9277.jpg' %}" class="d-block w-100" alt="...">
+        <img src="{% static 'tmp/photos/1.jpg' %}" class="d-block w-100 h-100%" alt="...">
     </div>
     <div class="carousel-item">{% load static%}
-      <img src="{% static 'tmp/photos/earth-moonstruck-with-its-new-mini-moon-a-look-at-some-spectacular-lunar-miracles.jpg' %}" class="d-block w-100" alt="...">
+      <img src="{% static 'tmp/photos/2.jpg' %}" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">{% load static%}
-      <img src="{% static 'tmp/photos/385eaae8e33cc1448ade00c532ea9277.jpg' %}" class="d-block w-100" alt="...">
+      <img src="{% static 'tmp/photos/4.jpg' %}" class="d-block w-100" alt="...">
     </div>
   </div>
 </div>
       <!above crousel things>
 <div class="container1">
-    <img src="" alt= "logo---">
+    <img src="{% static 'tmp/photos/logo.png' %}" alt= "logo---" class="d-block w-25 h-25">
     <p><b>Make Things Simple Not Easy</b> </p>
     <p> <b>Here is lot for you .....</b></p>
-    <a href="#"><button type="button" class="btn btn-primary">Signup</button></a>
+    <a href="#"><button type="button" class="btn btn-primary">Get Free Templates</button></a>
       </div>
     <!-- Optional JavaScript; choose one of the two! -->
 
