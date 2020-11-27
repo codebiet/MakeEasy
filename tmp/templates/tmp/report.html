@@ -1,0 +1,121 @@
+
+{% extends 'tmp/basic.html'%}
+
+{% block head %}
+{%load static%}
+<link rel="stylesheet" href="{%static 'tmp/report.css' %}">{%load static%}
+<script src="{%static 'tmp/jquery.js'%}"></script>{%load static%}
+<script src="{%static 'tmp/report1.js'%}"></script>
+{% endblock %}
+{% block title %} Resume for employees {% endblock %}
+
+
+{%block body %}
+<div class="lefthalf">
+    <div class="infog">
+        <h1>First Page Of Report</h1>
+        <form action="#" class="self_info">
+            <label for="pname">Project Name</label>
+            <input type="text" name="pname" id="pname" placeholder="project@x_y_z" required><br>
+            <label for="fname">First Student</label>
+            <input type="text" name="fname" id="fname" placeholder="john" required><br>
+            <label for="fname2">Second Student</label>
+            <input type="text" name="fname2" id="fname2" placeholder="john2" required><br>
+            <label for="fname3">Third Student</label>
+            <input type="text" name="fname3" id="fname3" placeholder="john3" required><br>
+            <label for="fname4">Fourth Student</label>
+            <input type="text" name="fname4" id="fname4" placeholder="john4" required><br>
+            <label for="tname">Teacher Name</label>
+            <input type="text" name="tname" id="tname" placeholder="Teacher Name" required><br>   
+            <label for="bname">Branch Name</label>
+            <input type="text" name="bname" id="bname" placeholder="Computer Science & Engineering" required><br> 
+            <label for="cname">College Name</label>
+            <input type="text" name="cname" id="bname" placeholder="Institute of Engineering" required><br>  
+        </form>
+        <button id="b1">Project Status Report</button>
+    </div>
+    <div class="skg">
+        <h1>Project Vision</h1>
+        <p>
+            Write about project aim or vision,that how it is going to be in future.
+        </p>
+        <form action="#" class="SKILLS">
+            <label for="skl">Vision</label>
+            <input type="text" name="skl" id="skl" required><br>
+        </form>
+        <button id="b22">next</button>
+    </div>
+    <div class="sfg">
+        <h1>Project Health</h1>
+        <p>
+            Write condition of your Project at current time,<br>
+            What you have completed till the day.<br>
+            and what remains to do in project.
+        </p>
+        <form action="#" class="Sft">
+            <label for="skt">Project Health</label>
+            <input type="text" name="skt" id="skt" required><br>
+            <label for="skt2">Completed till</label>
+            <input type="text" name="skt2" id="skt2" required><br>
+            <label for="skt3">What to Completed next</label>
+            <input type="text" name="skt3" id="skt3" required><br>
+
+        </form>
+        <button id="b32">next</button>
+    </div>
+    <div class="lng">
+        <h1>Issues/Road Blocks</h1>
+        <p>
+            Write issues faced and and what are road blocks to overcome them<br>
+            or any else.
+        </p>
+        <form action="#" class="slng">
+            <label for="langs">Issues/Roadblocks</label>
+            <input type="text" name="langs" id="langs" required><br>
+        </form>
+        <button id="b4">next</button>
+    </div>
+    <div class="defi">
+        <h1>Individual Responsibility of each Student</h1>
+        <form action="#" class="defig">
+            <input type="text" name="defig" id="defig" placeholder="Student" required><br>
+            <input type="text" name="defig" id="defig" placeholder="Responsibility" required>
+        </form>
+        <button id="b51">fill again</button>
+        <button id="b5">next</button>
+    </div>
+    <div class="expi">
+        <h1>Attach Your Screenshots</h1>
+        <p>
+           Attach your Screenshots here.
+        </p>
+        <form action="#" class="expig">
+            <label for="pic1">First pic</label>
+            <input type="image" name="pic1" , id="pic1" required>
+            <label for="pic2">Second pic</label>
+            <input type="image" name="pic2" id="pic2">
+            <label for="pic3">Third pic</label>
+            <input type="image" name="pic3" id="pic3">
+            <label for="pic4">Fourth pic</label>
+            <input type="image" name="pic4" id="pic4" required><br>
+        </form>
+        <button id="b6">Done</button>
+    </div>
+</div>
+<div class="righthalf">
+    <div class="btags">
+        <h3>A Project On</h3><br>
+        <p id="prname"></p>
+        <h3>Department of </h3>
+        <p id="brname"></p>
+        <p id="coname"></p>
+        <h3>Submitted to</h3>
+        <h4>Mr <p id="toname"></p></h4>
+        <h3>Submitted by</h3>
+        <p id="fullname"></p>
+        <p id="fullname2"></p>
+        <p id="fullname3"></p>
+        <p id="fullname4"></p>
+    </div>
+</div>
+    {% endblock %}
