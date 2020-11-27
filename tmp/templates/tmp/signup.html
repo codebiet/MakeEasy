@@ -27,32 +27,42 @@
     <title>Sign up for makeeasy</title>
   </head>
   <body>
+    <div>
+      {% for message in messages %}
+      <h4>{{message}}</h4>
+      {% endfor %}
+    </div>
     <div class="top bg-primary">
       <h1>Makeeasy</h1>
       <a class="links" href="#">Login from here</a>
     </div>
    <div>
-     <form>
+     <form method="post" class="from-group">
+       {% csrf_token %}
   <div class="form-group">
     <label for="fname">First name</label>
-    <input type="text" class="form-control" id=fname" aria-describedby="emailHelp" placeholder="First name" required>
+    <input type="text" name="first_name" class="form-control" id="fname" aria-describedby="emailHelp" placeholder="First name" required>
   </div>
   <div class="form-group">
     <label for="lname">Last name</label>
-    <input type="text" class="form-control" id="lname" aria-describedby="emailHelp" placeholder="Last name" required>
+    <input type="text" name="last_name" class="form-control" id="lname" aria-describedby="emailHelp" placeholder="Last name" required>
   </div>
   <div class="form-group">
     <label for="pno.">Contact no.</label>
-    <input type="tel" class="form-control" id="pno." aria-describedby="emailHelp" placeholder="Contact no." required>
+    <input type="tel" name="contact" class="form-control" id="pno." aria-describedby="emailHelp" placeholder="Contact no." required>
   </div>
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
   </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+       <div class="form-group">
+    <label for="pass">Password</label>
+    <input type="password" name="password1" class="form-control" id="pass" aria-describedby="emailHelp" placeholder="Password" required>
+  </div>
+       <div class="form-group">
+    <label for="pass2">Password</label>
+    <input type="password" name="password2" class="form-control" id="pass2" aria-describedby="emailHelp" placeholder="Again Password" required>
   </div>
   <div class="form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1">

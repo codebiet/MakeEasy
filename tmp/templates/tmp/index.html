@@ -22,18 +22,18 @@
               font-size: 40px;
           }
           nav{
-              opacity: 0.5;
+              opacity: 0.8;
               position: absolute;
               z-index: 15;
-              bottom: 38rem;
+              bottom: 47.5rem;
 
           }
           img{
-          height:610px;
+          height:760px;
           }
       </style>
 
-    <title>home page</title>
+    <title>MS | Home</title>
   </head>
   <body>
 
@@ -54,7 +54,7 @@
 </div>
        <! navigation bar>
    <nav class="navbar navbar-expand-lg navbar-light  bg-light">
-  <a class="navbar-brand" href="#">MakeSimple</a>
+  <a class="navbar-brand" href="{% url 'index' %}">MakeSimple</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -62,16 +62,12 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
+        <li class="nav-item active">
+        <a class="nav-link" href="{% url 'resume' %}">Resume <span class="sr-only">(current)</span></a>
       </li>
         <li class="nav-item active">
-        <a class="nav-link" href="#">Template <span class="sr-only">(current)</span></a>
-      </li>
-        <li class="nav-item active">
-        <a class="nav-link" href="#">Resume <span class="sr-only">(current)</span></a>
-      </li>
-        <li class="nav-item active">
-        <a class="nav-link" href="#">Report<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">Make Report<span class="sr-only">(current)</span></a>
       </li>
         <li class="nav-item active">
         <a class="nav-link" href="#">About us<span class="sr-only">(current)</span></a>
@@ -79,10 +75,10 @@
     </ul>
     <ul class="navbar-nav  my-2 my-lg-0">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Login <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{% url 'login' %}">Login <span class="sr-only">(current)</span></a>
       </li>
          <li class="nav-item active">
-        <a class="nav-link" href="#">Sign up<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{% url 'signup' %}">Sign up<span class="sr-only">(current)</span></a>
       </li>
     </ul>
   </div>
