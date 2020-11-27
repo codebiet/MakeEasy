@@ -14,14 +14,11 @@
         margin-bottom: 20px;
         height: 75px;
       }
-      h1{
-        float: left;
-        width: auto;
-        color: white;
+      img{
+      float:left;
       }
       .links{
         float: right;
-        color: white;
       }
     </style>
     <title>Sign up for makeeasy</title>
@@ -32,9 +29,9 @@
       <h4>{{message}}</h4>
       {% endfor %}
     </div>
-    <div class="top bg-primary">
-      <h1>Makeeasy</h1>
-      <a class="links" href="#">Login from here</a>
+    <div class="top">{% load static %}
+      <img src="{%static 'tmp/photos/logo1.png' %}",alt=" MakeEasy" >
+      <a class="links primary" href="{% url 'login'%}">Login from here</a>
     </div>
    <div>
      <form method="post" class="from-group">

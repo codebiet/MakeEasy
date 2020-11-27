@@ -14,8 +14,8 @@
               z-index: 10;
               bottom: 2rem;
               text-align: center;
-              align-content: center;
-              direction: block;
+              margin:auto
+              display: block;
               width: 100%;
               backface-visibility: visible;
               color: black;
@@ -54,7 +54,7 @@
 </div>
        <! navigation bar>
    <nav class="navbar navbar-expand-lg navbar-light  bg-light">
-  <a class="navbar-brand" href="{% url 'index' %}">MakeSimple</a>
+  <a class="navbar-brand" href="{% url 'index' %}"><img src="{%static 'tmp/photos/logo1.png' %}",alt=" MakeEasy" style="width: 100px;height :75%"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -85,7 +85,7 @@
 </nav>
       <!above crousel things>
 <div class="container1">
-    <img src="{% static 'tmp/photos/logo.png' %}" alt= "logo---" class="d-block w-25 h-25" style="margin-left:35rem">
+    <img src="{% static 'tmp/photos/logo.png' %}" alt= "logo---" class="d-block w-25 h-25" style="margin:auto;">
     <p><b>Make Things Simple Not Easy</b> </p>
     <p> <b>Here is lot for you .....</b></p>
     <a href="#"><button type="button" class="btn btn-primary">Get Free Templates</button></a>

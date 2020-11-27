@@ -1,32 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">{%load static%}
+{% extends 'tmp/basic.html'%}
+
+    {% block head %}
+    {%load static%}
     <link rel="stylesheet" href="{%static 'tmp/resume.css' %}">{%load static%}
     <script src="{%static 'tmp/jquery.js'%}"></script>{%load static%}
     <script src="{%static 'tmp/resume1.js'%}"></script>
-    <title>Resume structure</title>
-</head>
+    {% endblock %}
+    {% block title %} Resume for employees {% endblock %}
 
-<body>
+
+{%block body %}
     <div class="lefthalf">
         <div class="infog">
             <h1>Personal data</h1>
             <form action="#" class="self_info">
                 <label for="fname">First name</label>
-                <input type="text" name="fname" id="fname" value="john" required><br>
+                <input type="text" name="fname" id="fname" placeholder="john" required><br>
                 <label for="lname">Last name</label>
-                <input type="text" name="lname" id="lname" value="doe" required><br>
+                <input type="text" name="lname" id="lname" placeholder="doe" required><br>
                 <label for="email">Email</label>
-                <input type="email" name="mail" id="mail" value="john@xyz.abc" required> <br>
+                <input type="email" name="mail" id="mail" placeholder="john@xyz.abc" required> <br>
                 <label for="no">Contactno.</label>
-                <input type="tel" name="no" id="no" value="1234567891" required> <br>
+                <input type="tel" name="no" id="no" placeholder="1234567891" required> <br>
                 <label for="add">Address</label>
-                <input type="text" name="add" id="add" value="jhansi Uttar pradesh" required> <br>
+                <input type="text" name="add" id="add" placeholder="jhansi Uttar pradesh" required> <br>
                 <label for="pin">Pincode</label>
-                <input type="text" name="pin" id="pin" value="908484" required> <br>
+                <input type="text" name="pin" id="pin" placeholder="908484" required> <br>
             </form>
             <button id="b1">Skills</button>
         </div>
@@ -179,6 +179,4 @@
         </div>
 
     </div>
-</body>
-
-</html>
+{% endblock %}

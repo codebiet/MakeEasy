@@ -31,10 +31,7 @@
    }
    body{
     background-color: whitesmoke ;
-   }
-   h1{
-     text-align: center;
-     margin-top:100px;
+    align-content:center;
    }
    input,button{
      margin-top: 5px;
@@ -44,11 +41,25 @@
    a{
      margin-left: 25px;
    }
+   img{
+    width:200px;
+    height:auto;
+      }
+     .image{
+      flex-wrap: wrap;
+      align-content: center;
+      width:250px;
+      height:auto;
+      margin:auto;
+      margin-top:100px;
+     }
   </style>
 </head>
 
-<body>
-   <h1 class="text-primary">Makeeasy</h1>
+<body>{% load static%}
+<div class="image">
+   <img src="{%static 'tmp/photos/logo1.png' %}",alt=" MakeEasy" >
+</div>
   <div class="king">
     <div class="formcover">
       <h5>Log in to makeeasy</h5>
@@ -65,7 +76,7 @@
       </form>
     </div>
     <a href="#">forgotten password?</a>
-    <a href="#">Sign up for makeeasy</a>
+    <a href="{% url 'signup'}">Sign up for makeeasy</a>
     </div>
 
 
