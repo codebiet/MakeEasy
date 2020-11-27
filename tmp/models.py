@@ -5,4 +5,7 @@ from django.contrib.auth.forms import User
 class Meta:
     model = User
     username = ("username",)
+    first_name = ("First_name",)
+    last_name = ("Last_name",)
+    Phone = ("Phone",)
 
