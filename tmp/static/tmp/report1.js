@@ -59,11 +59,40 @@ $(document).ready(function(){
         var arr = skl.split(";");
         var i ;
         for (i = 0; i < arr.length; i++) {
-            $("#sinfo").append("<li>" + arr[i] + "</li>");
+            $("#sskl").append("<li>" + arr[i] + "</li>");
         }
     });
-    $("#b51").click(function(){
-        $(".defig").trigger("reset");
+    $("#b32").click(function(){
+        var skl = $("#skt").val();
+        var arr = skl.split(";");
+        var i ;
+        for (i = 0; i < arr.length; i++) {
+            $("#sskt").append("<li>" + arr[i] + "</li>");
+        }
+        var skl = $("#skt2").val();
+        var arr = skl.split(";");
+        var i ;
+        for (i = 0; i < arr.length; i++) {
+            $("#sskt2").append("<li>" + arr[i] + "</li>");
+        }
+        var skl = $("#skt3").val();
+        var arr = skl.split(";");
+        var i ;
+        for (i = 0; i < arr.length; i++) {
+            $("#sskt3").append("<li>" + arr[i] + "</li>");
+        }
     });
+    $("#b4").click(function(){
+        var skl = $("#langs").val();
+        var arr = skl.split(";");
+        var i ;
+        for (i = 0; i < arr.length; i++) {
+            $("#llangs").append("<li>" + arr[i] + "</li>");
+        }
+    });
+    $("#b5").click(function(){
+        $("#ddefig").text($("#defig").val());
+        $("#ddefig2").text($("#defig2").val());
+});
    
 });
