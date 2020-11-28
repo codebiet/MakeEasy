@@ -7,9 +7,6 @@ from django.http import HttpResponse
 def resume(request):
     return render(request,"tmp/resume.html")
 
-def temp(request):
-    return render(request,"tmp/temp.html")
-
 def index(request):
     return render(request,"tmp/index.html")
 
