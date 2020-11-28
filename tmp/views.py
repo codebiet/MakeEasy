@@ -10,6 +10,9 @@ def resume(request):
 def index(request):
     return render(request,"tmp/index.html")
 
+def temp(request):
+    return render(request,"tmp/temp.html")
+
 def login(request):
     if request.method == 'POST':
         email = request.POST['username']
