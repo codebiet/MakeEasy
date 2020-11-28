@@ -62,8 +62,8 @@ $(document).ready(function(){
             $("#sinfo").append("<li>" + arr[i] + "</li>");
         }
     });
-    $("#b21").click(function(){
-        $(".SKILLS").trigger("reset");
+    $("#b51").click(function(){
+        $(".defig").trigger("reset");
     });
    
 });
