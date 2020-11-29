@@ -31,28 +31,28 @@ $(document).ready(function(){
         $("ul").css("margin-left","10%")
     });
     $("#pname").blur(function(){
-        $(".prname").text($("#pname").val());
+        $("#prname").text($("#pname").val());
     });
     $("#cname").blur(function(){
-        $(".coname").text($("#cname").val());
+        $("#coname").text($("#cname").val());
     });
     $("#bname").blur(function(){
-        $(".brname").text($("#bname").val());
+        $("#brname").text($("#bname").val());
     });
     $("#tname").blur(function(){
-        $(".toname").text($("#tname").val());
+        $("#toname").text($("#tname").val());
     });
     $("#fname").blur(function(){
-        $(".fullname").text($("#fname").val());
+        $("#fullname").text($("#fname").val());
     });
     $("#fname2").blur(function(){
-        $(".fullname2").text($("#fname2").val());
+        $("#fullname2").text($("#fname2").val());
     });
     $("#fname3").blur(function(){
-        $(".fullname3").text($("#fname3").val());
+        $("#fullname3").text($("#fname3").val());
     });
     $("#fname4").blur(function(){
-        $(".fullname4").text($("#fname4").val());
+        $("#fullname4").text($("#fname4").val());
     });
     $("#b22").click(function(){
         var skl = $("#skl").val();
