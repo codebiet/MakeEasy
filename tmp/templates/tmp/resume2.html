@@ -1,17 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'tmp/basic.html'%}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="resume2.css">
-    <script src="jquery.js"></script>
-    <script src="resume2.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <title>Resume structure</title>
-</head>
+    {% block head %}
+    {%load static%}
+    <link rel="stylesheet" href="{%static 'tmp/resume2.css' %}">{%load static%}
+    <script src="{%static 'tmp/jquery2.js'%}"></script>{%load static%}
+    <script src="{%static 'tmp/resume2.js'%}"></script>
+    {% endblock %}
+    {% block title %} Resume for employees {% endblock %}
 
-<body>
+
+{%block body %}
       <div class="colr">
         <h1>Want to customize Resume</h1>
         <form action="#" class="colf">
@@ -175,6 +173,4 @@
         <button id="res">Reset Resume</button>
         <button id="Pr">Print Resume</button>
     </div>
-</body>
-
-</html>
+{% endblock %}
