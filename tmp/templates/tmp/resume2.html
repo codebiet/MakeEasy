@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resume2.css">
+    <script src="jquery.js"></script>
+    <script src="resume2.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Resume structure</title>
+</head>
+
+<body>
+      <div class="colr">
+        <h1>Want to customize Resume</h1>
+        <form action="#" class="colf">
+            <label for="col">Change color of icons</label><br>
+            <a href="https://www.w3schools.com/colors/colors_picker.asp"><small>Click here for hints</small></a><br>
+            <input type="text" id="col" placeholder="rgba(0,0,0,0)" >
+            <label for="col1">Change upper background color</label><br>
+            <a href="https://www.w3schools.com/colors/colors_picker.asp"><small>Click here for hints</small></a><br>
+            <input type="text" id="col1" placeholder="rgba(0,0,0,0)" >
+            <label for="col2">Change lower background color</label><br>
+            <a href="https://www.w3schools.com/colors/colors_picker.asp"><small>Click here for hints</small></a><br>
+            <input type="text" id="col2" placeholder="rgba(0,0,0,0)" >
+        </form>
+    </div>
+    <div class="lefthalf">
+        <div class="infog">
+            <h1>Personal data</h1>
+            <form action="#" class="self_info">
+                <label for="fname">First Name</label>
+                <input type="text" name="fname" id="fname" required><br>
+                <label for="lname">Last Name</label>
+                <input type="text" name="lname" id="lname" required><br>
+                <label for="add">Address</label>
+                <input type="text" name="add" id="add" required> <br>
+                <label for="no">Contactno.</label>
+                <input type="tel" name="no" id="no" required> <br>
+                <label for="email">Email</label>
+                <input type="email" name="mail" id="mail" required> <br>
+                <label for="linked">Linkedin Profile</label>
+                <input type="text" name="linked" id="linked" required> <br>
+                <label for="Portfolio">Twitter/blog Portfolio</label>
+                <input type="text" name="Portfolio" id="Portfolio" required> <br>
+            </form>
+            <button id="11">Fill Again</button>
+            <button id="12">Next</button>
+        </div>
+        <div class="objf">
+            <h1>Objectivies</h1>
+            <form action="#" class="objff">
+                <label for="obj_info">Objetive</label>
+                <input type="text" name="obj_info" id="obj_info" required>
+            </form>
+            <button id="21">Fill Again</button>
+            <button id="22">Add Paragraph</button>
+            <button id="23">Next</button>
+        </div>
+        <div class="eduf">
+            <h1>Education</h1>
+            <form action="#" class="eduff">
+                <label for="Degree">Degree Name</label>
+                <input type="text" id="degree" name="degree" required>
+                <label for="sch">Institute Name</label>
+                <input type="text" name="sch" id="sch" required>
+                <label for="fdate">Start Date</label>
+                <input type="date" name="sedu" id="fdate" required>
+                <label for="ldate">Last Date</label>
+                <input type="date" name="ledu" id="ldate" required>
+                <label for="edu_info">Degree Information</label>
+                <input type="text" id="edu_info" name="edu_info">
+            </form>
+            <button id="31">Fill this Again</button>
+            <button id="32">fill more degree</button>
+            <button id="33">Next</button>
+        </div>
+        <div class="expf">
+            <h1>Experience</h1>
+            <form action="#" class="expff">
+                <label for="job">Job Name</label>
+                <input type="text" id="job" name="job" required>
+                <label for="cmp">Company Name</label>
+                <input type="text" name="cmp" id="cmp" required>
+                <label for="fedate">Start Date</label>
+                <input type="date" name="sexp" id="fedate" required>
+                <label for="ledate">last Date</label>
+                <input type="date" name="lexp" id="ledate" required>
+                <label for="job_info">Job Information</label>
+                <input type="text" id="job_info" name="job_info">
+            </form>
+            <button id="41">Fill Again</button>
+            <button id="42">fill more jobs</button>
+            <button id="43">Next</button>
+        </div>
+        <div class="sklf">
+            <h1>Skills</h1>
+            <form action="#" class="sklff">
+                <label for="skl_info">Skill</label>
+                <input type="text" name="skl_info" id="skl_info" required>
+            </form>
+            <button id="51">Fill Again</button>
+            <button id="52">More Skills</button>
+            <button id="53">Next</button>
+        </div>
+        <div class="actf">
+            <h1>Activities</h1>
+            <form action="#" class="actff">
+                <label for="act_info">Activities</label>
+                <input type="text" name="act_info" id="act_info" required>
+            </form>
+            <button id="61">Fill Again</button>
+            <button id="62">More Activities</button>
+            <button id="63">Done</button>
+        </div>
+    </div>
+    <div class="righthalf">
+        <div class="right_left">
+            <div class="fullname">
+                <p class="firstname">firstname</p>
+                <p class="lastname"><strong>Lastname</strong></p>
+            </div>
+            <div class="btags">
+                <p class="mtags">Address <i class="material-icons" style="color:purple">account_balance</i></p>
+                <address id="addr">
+                </address>
+                <p class="mtags">Phone <i class="material-icons" style="color:purple;margin-left:0px;">phone</i></p>
+                <p id="pno"></p>
+                <p class="mtags">E-mail <i class="material-icons" style="color:purple">mail</i></p>
+                <p id="email"></p>
+                <p class="mtags">Linkedin Profile <i class="material-icons" style="color:purple">web_asset</i></p>
+                <p id="Linkedin"></p>
+                <p class="mtags">Twitter/Blog Portfolio <i class="material-icons" style="color:purple">web</i></p>
+                <p id="TB"></p>
+            </div>
+        </div>
+
+
+
+        <div class="right_right">
+
+            <div class="dataa">
+                <p class="ntags"><i class="material-icons" style="color:purple">assignment</i> Objective</p>
+                <div id="infoobjr" class="datar"></div>
+            </div>
+            <div class="dataa">
+                <p class="ntags"><i class="material-icons" style="color:purple">book</i> Education</p>
+                <div id="infoedul" class="datal"></div>
+            </div>
+            <div class="dataa">
+                <p class="ntags"><i class="material-icons" style="color:purple">laptop</i> Experience</p>
+                <div id="infoexpl" class="datal"></div>
+            </div>
+            <div class="dataa">
+                <p class="ntags"><i class="material-icons" style="color:purple">build</i> Skills</p>
+
+                <div id="infosl" class="datals">
+                </div>
+                <div id="infoslr" class="datars">
+                </div>
+            </div>
+
+            <div class="dataa">
+                <p class="ntags"><i class="material-icons" style="color:purple">more</i> Activities</p>
+                <div id="infoinsl" class="datal"></div>
+            </div>
+
+        </div>
+
+    </div>
+    <!------some other animation and functionality--> 
+    <div>
+        <button id="custom">Customize Resume</button>
+        <button id="res">Reset Resume</button>
+        <button id="Pr">Print Resume</button>
+    </div>
+</body>
+
+</html>
