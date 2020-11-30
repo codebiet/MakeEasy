@@ -23,13 +23,37 @@
       .center {
        text-align: center;
         }
+
+        .alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
     </style>
     <title>Sign up for makeeasy</title>
   </head>
   <body style="background-color: whitesmoke">
     <div>
       {% for message in messages %}
-      <h4>{{message}}</h4>
+      <div class="alert">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    <strong>{{message}}</strong>
+  </div>
       {% endfor %}
     </div>
     <div class="center" style="margin-right:35%;margin-left:35%">

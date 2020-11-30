@@ -27,7 +27,7 @@ def login(request):
             auth.login(request,user)
             return redirect("/")
         else:
-            messages.info(request,user)
+            messages.info(request,"Email or password is incorrect")
             return redirect("login")
     else:
         return render(request,"tmp/login.html")
@@ -42,7 +42,7 @@ def signup(request):
 
         if password1==password2:
             if User.objects.filter(username=email).exists():
-                messages.info(request,"Username Used")
+                messages.info(request,"Email Used")
                 return redirect('signup')
             else:
                 user = User.objects.create_user(username=email,password=password1,email=email,first_name=first_name,last_name=last_name)
