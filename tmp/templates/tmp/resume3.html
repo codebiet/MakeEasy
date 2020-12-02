@@ -1,0 +1,204 @@
+{% extends 'tmp/basic.html'%}
+
+    {% block head %}
+    {%load static%}
+    <link rel="stylesheet" href="{%static 'tmp/resume3.css' %}">{%load static%}
+    <script src="{%static 'tmp/jquery.js'%}"></script>{%load static%}
+    <script src="{%static 'tmp/resume3.js'%}"></script>
+      {% endblock %}
+    {% block title %} Resume for employees {% endblock %}
+
+
+{%block body %}
+    <div class="topmost">
+        <b>Add more -- </b>
+        <button class="a_ex">Experience</button>
+        <button class="a_eds">Education</button>
+        <button class="a_s" style="margin-right: 20px;">Skills</button>
+        <b>color -- </b>
+        <button class="c_b">Backgound</button>
+        <button class="c_h">Heading</button>
+        <button class="c_n">Name</button>
+        <button class="c_d" style="margin-right:20px;">Details</button>
+        <b>font-size --</b>
+        <button class="f_h">Heading</button>
+        <button class="f_n">Name</button>
+        <button class="f_d">Details</button>
+    </div>
+    <div class="fval">
+        <form action="#">
+            <label for="Heading"> font size of heading</label>
+            <input id="Heading" type="number" min="0" max="100" placeholder="12">px
+        </form>
+        <button id="val5" style=" float: right; width:auto;">close </button>
+    </div>
+    <div class="fval1">
+        <form action="#">
+            <label for="nm"> font size of name</label>
+            <input id="nm" type="number" min="0" max="100" placeholder="32">px
+        </form>
+        <button id="val6" style=" float: right; width:auto;">close </button>
+    </div>
+    <div class="fval2">
+        <form action="#">
+            <label for="detail"> font size of display</label>
+            <input id="detail" type="number" min="0" max="100" placeholder="14">px
+        </form>
+        <button id="val7" style=" float: right; width:auto;">close </button>
+    </div>
+    <div class="cval">
+        <form action="#">
+            <label for="redh"> Red color</label>
+            <input id="redh" type="number" min="0" max="1000" placeholder="30">
+            <label for="greenh"> Green color</label>
+            <input id="greenh" type="number" min="0" max="1000" placeholder="80">
+            <label for="blueh"> blue color</label>
+            <input id="blueh" type="number" min="0" max="1000" placeholder="138">
+            <label for="oph"> opacity</label>
+            <input id="oph" type="number" min="0" max="1000" placeholder="842">
+            <button id="cval">change</button>
+        </form>
+        <button id="val1" style=" float: right; width:auto;">close </button>
+    </div>
+    <div class="cval1">
+        <form action="#">
+            <label for="redh1"> Red color</label>
+            <input id="redh1" type="number" min="0" max="1000" placeholder="0">
+            <label for="greenh1"> Green color</label>
+            <input id="greenh1" type="number" min="0" max="1000" placeholder="0">
+            <label for="blueh1"> blue color</label>
+            <input id="blueh1" type="number" min="0" max="1000" placeholder="0">
+            <label for="oph1"> opacity</label>
+            <input id="oph1" type="number" min="0" max="1000" placeholder="0">
+            <button id="cval1">change</button>
+        </form>
+        <button id="val2" style=" float: right; width:auto;">close </button>
+    </div>
+    <div class="cval2">
+        <form action="#">
+            <label for="redh2"> Red color</label>
+            <input id="redh2" type="number" min="0" max="1000" placeholder="0">
+            <label for="greenh2"> Green color</label>
+            <input id="greenh2" type="number" min="0" max="1000" placeholder="0">
+            <label for="blueh2"> blue color</label>
+            <input id="blueh2" type="number" min="0" max="1000" placeholder="0">
+            <label for="oph2"> opacity</label>
+            <input id="oph2" type="number" min="0" max="1000" placeholder="0">
+            <button id="cval2">change</button>
+        </form>
+        <button id="val3" style=" float: right; width:auto;">close </button>
+    </div>
+    <div class="cval3">
+        <form action="#">
+            <label for="redh3"> Red color</label>
+            <input id="redh3" type="number" min="0" max="1000" placeholder="100">
+            <label for="greenh3"> Green color</label>
+            <input id="greenh3" type="number" min="0" max="1000" placeholder="100">
+            <label for="blueh3"> blue color</label>
+            <input id="blueh3" type="number" min="0" max="1000" placeholder="100">
+            <label for="oph3"> opacity</label>
+            <input id="oph3" type="number" min="0" max="1000" placeholder="1000">
+        </form>
+        <button id="cval3">change</button>
+        <button id="val4" style=" float: right; width:auto;">close </button>
+    </div>
+    <div class="king">
+        <div class="Upper">
+            <div class="info">
+                <p contenteditable="true"  class="Fullname" id="Fullname"> Your name</p>
+                <p class="obj" contenteditable="true">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Perferendisnihil co</p>
+            </div>
+            <div class="more_info">
+                <address class="addrs" contenteditable="true">123 Your Street <br>
+                    Your city, ST 123456
+                </address>
+                <p class="pno" contenteditable="true"><b>(123)456-7890</b></p>
+                <p class="mail" contenteditable="true"><b>abc@example.xyz</b></p>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="b_left">
+                <div class="exp">
+                    <p class="heading">EXPERIENCE</p><br>
+                    <p class="cmp_detail"><span contenteditable="true" class="cmp"><b>Company</b></span>, <span
+                            contenteditable="true" class="loc">Location</span> -- <span contenteditable="true"
+                            class="job_title"><i> Job Title</i></span></p>
+                    <p class="datecmp"><span class="sdate_cmp" contenteditable="true">MONTH 20XX</span> -- <span
+                            class="ldate" contenteditable="true"> PRESENT</span></p>
+                    <p class="job_detail" contenteditable="true">Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit.
+                        Modi tempore maiores alias laboriosam eligendi, officia unde aliquam nihil? Accusantium dolorum
+                        reprehenderit qui mollitia dignissimos! Veniam tempora laudantium repellat doloremque
+                        consequatur.
+                    </p><br>
+                    <p class="cmp_detail"><span contenteditable="true" class="cmp"><b>Company</b></span>, <span
+                            contenteditable="true" class="loc">Location</span> -- <span contenteditable="true"
+                            class="job_title"><i> Job Title</i></span></p>
+                    <p class="datecmp"><span class="sdate_cmp" contenteditable="true">MONTH 20XX</span> -- <span
+                            class="ldate" contenteditable="true"> MONTH 20XX</span></p>
+                    <p class="job_detail" contenteditable="true">Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit.
+                        Modi tempore maiores alias laboriosam eligendi, officia unde aliquam nihil? Accusantium dolorum
+                        reprehenderit qui mollitia dignissimos! Veniam tempora laudantium repellat doloremque
+                        consequatur.
+                    </p><br>
+                </div>
+                <div class="edu">
+                    <p class="heading">EDUCATION</p><br>
+                    <p class="cmp_detail"><span contenteditable="true" class="cmp"><b>School name</b></span>, <span
+                            contenteditable="true" class="loc">Location</span> -- <span contenteditable="true"
+                            class="job_title"><i> Degree</i></span></p>
+                    <p class="datecmp"><span class="sdate_cmp" contenteditable="true">MONTH 20XX</span> -- <span
+                            class="ldate" contenteditable="true"> MONTH 20XX</span></p>
+                    <p class="job_detail" contenteditable="true">Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit.
+                        Modi tempore maiores alias laboriosam eligendi, officia unde aliquam nihil? Accusantium dolorum
+                        reprehenderit qui mollitia dignissimos! Veniam tempora laudantium repellat doloremque
+                        consequatur.
+                    </p><br>
+                    <p class="cmp_detail"><span contenteditable="true" class="cmp"><b>School name</b></span>, <span
+                            contenteditable="true" class="loc">Location</span> -- <span contenteditable="true"
+                            class="job_title"><i> Degree</i></span></p>
+                    <p class="datecmp"><span class="sdate_cmp" contenteditable="true">MONTH 20XX</span> -- <span
+                            class="ldate" contenteditable="true"> MONTH 20XX</span></p>
+                    <p class="job_detail" contenteditable="true">Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit.
+                        Modi tempore maiores alias laboriosam eligendi, officia unde aliquam nihil? Accusantium dolorum
+                        reprehenderit qui mollitia dignissimos! Veniam tempora laudantium repellat doloremque
+                        consequatur.
+                    </p><br>
+                </div>
+                <div class="project">
+                    <p class="heading">PROJECTS</p>
+                    <p class="cmp_detail"><span contenteditable="true" class="cmp"><b>Project name</b></span> -- <span
+                            contenteditable="true" class="job_title"><i> Detail</i></span></p>
+                    <p class="job_detail" contenteditable="true">Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit.
+                        Modi tempore maiores alias laboriosam eligendi, officia unde aliquam nihil? Accusantium dolorum
+                        reprehenderit qui mollitia dignissimos! Veniam tempora laudantium repellat doloremque
+                        consequatur.
+                    </p><br>
+                </div>
+            </div>
+            <div class="b_right">
+                <div class="skills">
+                    <p class="heading">SKILLS</p>
+                    <p contenteditable="true" class="job_detail">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat arc</p>
+                    <p contenteditable="true" class="job_detail">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat arc</p>
+                    <p contenteditable="true" class="job_detail">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat arc</p>
+                    <p contenteditable="true" class="job_detail">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat arc</p>
+                    <p contenteditable="true" class="job_detail">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat arc</p>
+                    <p contenteditable="true" class="job_detail">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat arc</p>
+                </div>
+                <div>
+                    <p class="heading"><br><br>LANGUAGES</p>
+                    <p contenteditable="true" class="job_detail">Lorem ipsum, dolor sit amet, consectetur, adipisicing elit.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="closure">
+        <button class="done" style="background-color: royalblue; color: white;">Final input page</button>
+    </div>
+{% endblock %}
