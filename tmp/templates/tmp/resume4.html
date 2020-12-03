@@ -1,0 +1,82 @@
+{% extends 'tmp/basic.html'%}
+
+    {% block head %}
+    {%load static%}
+    <link rel="stylesheet" href="{%static 'tmp/resume4.css' %}">
+    {% endblock %}
+    {% block title %} Resume for employees {% endblock %}
+
+
+{%block body %}
+    <div class="head">
+        <p class="fullname" contenteditable="true"> <span class="fname">STEPHEN</span><span class="lname">GREET</span></p>
+        <p class="about" contenteditable="true">Digital Market Analyst</p>
+    </div>
+    <div class="left">
+        <div class="contact">
+            <p class="heading">CONTACT</p>
+            <p class="values"><span contenteditable="true">Brooklyn,New York 11222</span></p>
+            <p class="values"><span contenteditable="true">(123)-456-789</span></p>
+            <p class="values"><span contenteditable="true">stephen@example.com</span></p>
+            <p class="values"><span contenteditable="true">Linkedin</span>tab</p>
+        </div>
+        <div class="education">
+            <p class="heading">EDUCATION</p>
+            <p class="values" contenteditable="true">B.S. in Marketing</p>
+            <p class="values" contenteditable="true">University of pittsburg</p>
+            <p class="values" contenteditable="true">Pittsburg P.A</p>
+            <p class="values" contenteditable="true">2017-2021(expected)</p>
+            <p class="values" contenteditable="true">GPA 5.55</p>
+        </div>
+        <div class="relevant">
+            <p class="heading">RELAVANT COURSES</p>
+            <p class="values" contenteditable="true">Intro marketing</p>
+            <p class="values" contenteditable="true">Marketing Search</p>
+            <p class="values" contenteditable="true">Consumer Behavior</p>
+            <p class="values" contenteditable="true">SalesForce Management</p>
+            <p class="values" contenteditable="true">Electronic Commence</p>
+            <p class="values" contenteditable="true">Advertising and sale promotions</p>
+            <p class="values" contenteditable="true">Principle of saling</p>
+        </div>
+    </div>
+    <div class="right">
+        <div class="Objective">
+            <p class="heading">CARRER OBJECTIVE</p>
+            <p class="values" contenteditable="true">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Doloremque, quam, similique dolore a perspiciatis asperiores distinctio itaque ducimus repellendus
+                facere quod quae corporis molestias dolor quas! Sunt dignissimos soluta eum.</p>
+        </div>
+        <div class="experience">
+            <p class="heading">CARRER OBJECTIVE</p>
+            <p class="heading2" contenteditable="true">Digital Marketing Analyst Intern</p>
+            <p class="values" contenteditable="true">Marketing Science Associate / April 2020-current / NewYork,NY</p>
+            <ul>
+            <li class="values" contenteditable="true">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro
+                sunt aute</li>
+            <li class="values" contenteditable="true">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro
+                sunt aute</li>
+            <li class="values" contenteditable="true">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro
+                sunt aute</li>
+            <li class="values" contenteditable="true">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro
+                sunt aute</li>
+            </ul>
+        </div>
+        <div class="project">
+            <p class="heading">PROJECTS</p>
+            <p class="heading2" contenteditable="true">Local SEO</p>
+            <ul>
+            <li class="values" contenteditable="true">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro
+                sunt aute</li>
+            <li class="values" contenteditable="true">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro
+                sunt aute</li>
+            </ul>
+            <p class="heading2" contenteditable="true">Paid Ads for local animal shelter</p>
+            <ul>
+            <li class="values" contenteditable="true">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro
+                sunt aute</li>
+            <li class="values" contenteditable="true">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro
+                sunt aute</li>
+            </ul>
+        </div>
+    </div>
+{ % endblock %}
