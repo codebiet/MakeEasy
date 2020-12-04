@@ -57,6 +57,9 @@ body{
 .btags h3{
     text-align: center;
 }
+.btags p{
+    text-align: center;
+}
 .mtags{
     font-size: 20px;
 }

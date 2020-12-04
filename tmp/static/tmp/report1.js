@@ -91,8 +91,53 @@ $(document).ready(function(){
         }
     });
     $("#b5").click(function(){
-        $("#ddefig").text($("#defig").val());
-        $("#ddefig2").text($("#defig2").val());
-});
-   
+        var skl = $("#defig").val();
+        var arr = skl.split(";");
+        var i ;
+        for (i = 0; i < arr.length; i++) {
+            $("#ddefig").append("<li>" + arr[i] + "</li>");
+        }
+        var skl = $("#defig1").val();
+        var arr = skl.split(";");
+        var i ;
+        for (i = 0; i < arr.length; i++) {
+            $("#ddefig1").append("<li>" + arr[i] + "</li>");
+        }
+        var skl = $("#defig2").val();
+        var arr = skl.split(";");
+        var i ;
+        for (i = 0; i < arr.length; i++) {
+            $("#ddefig2").append("<li>" + arr[i] + "</li>");
+        } 
+        var skl = $("#defig3").val();
+        var arr = skl.split(";");
+        var i ;
+        for (i = 0; i < arr.length; i++) {
+            $("#ddefig3").append("<li>" + arr[i] + "</li>");
+        }
+        var skl = $("#defig4").val();
+        var arr = skl.split(";");
+        var i ;
+        for (i = 0; i < arr.length; i++) {
+            $("#ddefig4").append("<li>" + arr[i] + "</li>");
+        }
+        var skl = $("#defig5").val();
+        var arr = skl.split(";");
+        var i ;
+        for (i = 0; i < arr.length; i++) {
+            $("#ddefig5").append("<li>" + arr[i] + "</li>");
+        }
+        var skl = $("#defig6").val();
+        var arr = skl.split(";");
+        var i ;
+        for (i = 0; i < arr.length; i++) {
+            $("#ddefig6").append("<li>" + arr[i] + "</li>");
+        }
+        var skl = $("#defig7").val();
+        var arr = skl.split(";");
+        var i ;
+        for (i = 0; i < arr.length; i++) {
+            $("#ddefig7").append("<li>" + arr[i] + "</li>");
+        }
+    });
 });
