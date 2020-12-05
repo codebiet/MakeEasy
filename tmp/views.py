@@ -49,7 +49,7 @@ def signup(request):
                 return redirect('signup')
             else:
                 user = User.objects.create_user(username=email,password=password1,email=email,first_name=first_name,last_name=last_name)
-                user.save();
+                user.save()
                 return redirect("login")
         else:
             messages.info(request,"Password doesn't match")
