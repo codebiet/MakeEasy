@@ -7,8 +7,21 @@ from django.http import HttpResponse
 def resume(request):
     return render(request,"tmp/resume.html")
 
+def aboutus(request):
+    return render(request,"tmp/aboutus.html")
+
+def resumehandler(request):
+    return render(request,"tmp/resumehandler.html")
+
 def resume2(request):
     return render(request,"tmp/resume2.html")
+
+def resume3(request):
+    return render(request,"tmp/resume3.html")
+
+def resume4(request):
+    return render(request,"tmp/resume4.html")
+
 
 def report(request):
     return render(request,"tmp/report.html")

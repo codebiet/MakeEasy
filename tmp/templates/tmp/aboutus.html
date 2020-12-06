@@ -1,0 +1,98 @@
+{% extends 'tmp/basic.html'%}
+
+    {% block head %}
+    {%load static%}
+    <link rel="stylesheet" href="{%static 'tmp/resume2.css' %}">{%load static%}
+    <script src="{%static 'tmp/jquery.js'%}"></script>{%load static%}
+    <script src="{%static 'tmp/resume2.js'%}"></script>
+    <style>
+.divshow {
+  width: 50%;
+  height: 35%;
+  background: #344373;
+  opacity: .9;
+}
+
+.divshowl {
+  width: 75%;
+  height: 35%;
+  background: #cf5a2b;
+  opacity: .9;
+  float: right;
+}
+#container {
+  background-color: red;
+  overflow: hidden;
+  width: 100%;
+  height: 400px;
+}
+
+#inner {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.child {
+  float: left;
+  background: #344373;
+  width: 75%;
+  height: 100%;
+}
+.child2 {
+  float: left;
+  background-color: #344373;
+  width: 25%;
+  height: 100%;
+}
+.child3 {
+  float: left;
+  background: #cf5a2b;
+  width: 75%;
+  height: 100%;
+}
+.child4 {
+  float: left;
+  background-color: #cf5a2b;
+  width: 25%;
+  height: 100%;
+}
+
+</style>
+
+
+    {% endblock %}
+    {% block title %} Resume for employees {% endblock %}
+
+{%block body %}
+
+hello
+<hr>
+<div id="container">
+  <div id="inner">
+        {% load static%}<div class="child2" ><img src="{% static 'tmp/photos/kps.jpeg' %}" height="100%" width="90%"></div>
+      <div class="child">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consequatur cupiditate dignissimos eaque est eum iure libero minima nisi pariatur quidem, quis quos recusandae, repellendus, tempore totam velit vitae voluptates?</div>
+  </div>
+</div>
+<div id="container">
+  <div id="inner">
+        <div class="child3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consequatur cupiditate dignissimos eaque est eum iure libero minima nisi pariatur quidem, quis quos recusandae, repellendus, tempore totam velit vitae voluptates?</div>
+        {% load static%}<div class="child4" ><img src="{% static 'tmp/photos/kps.jpeg' %}" height="100%" width="90%" style="float:right"></div>
+
+  </div>
+</div>
+<div id="container">
+  <div id="inner">
+        {% load static%}<div class="child2" ><img src="{% static 'tmp/photos/kps.jpeg' %}" height="100%" width="90%"></div>
+      <div class="child">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consequatur cupiditate dignissimos eaque est eum iure libero minima nisi pariatur quidem, quis quos recusandae, repellendus, tempore totam velit vitae voluptates?</div>
+  </div>
+</div>
+<div id="container">
+  <div id="inner">
+        <div class="child3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consequatur cupiditate dignissimos eaque est eum iure libero minima nisi pariatur quidem, quis quos recusandae, repellendus, tempore totam velit vitae voluptates?</div>
+        {% load static%}<div class="child4" ><img src="{% static 'tmp/photos/kps.jpeg' %}" height="100%" width="90%" style="float:right"></div>
+
+  </div>
+</div>
+
+{% endblock %}
