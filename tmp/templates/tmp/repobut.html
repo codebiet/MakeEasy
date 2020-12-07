@@ -8,80 +8,10 @@
         {%load static%}
         <link rel="stylesheet" href="{%static 'tmp/style2.css' %}">
  {% endblock %}
-    {% block title %} Templates list {% endblock %}
+    {% block title %} Report list {% endblock %}
 
 
 {% block body %}
-<h1>Resume Templates</h1>
-<hr>
-
-    <div class="d-flex m-5">
-        <div class="card d m-5" style="width: 18rem;">
-             <div class="card1 re1">
-         <div class="img"> <span></span><span></span><span></span><span></span></div>
-         <div class="content">
-             <h4>Create Resume</h4>
-             <a href="{% url 'resume' %}" class="btn btn-primary">Lets go!</a>
-         </div>
-     </div>
-            <div class="card-body">
-                <h5 class="card-title">Resume 1</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's
-                    content.</p>
-
-            </div>
-        </div>
-        <div class="card m-5" style="width: 18rem;">
-            <div class="card2 re2">
-         <div class="img"> <span></span><span></span><span></span><span></span></div>
-         <div class="content">
-             <h2>create resume</h2>
-             <a href="{% url 'resume2' %}" class="btn btn-primary">lets go!</a>
-         </div>
-     </div>
-            <div class="card-body">
-                <h5 class="card-title">Resume 2</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's
-                    content.</p>
-            </div>
-        </div>
-    </div>
-    <div class="d-flex m-5">
-        <div class="card m-5" style="width: 18rem;">
-            <div class="card3 re3">
-         <div class="img"> <span></span><span></span><span></span><span></span></div>
-         <div class="content">
-             <h2>create Resume</h2>
-             <a href="{% url 'resume3' %}" class="btn btn-primary">lets go!</a>
-         </div>
-     </div>
-            <div class="card-body">
-                <h5 class="card-title">Resume 3</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's
-                    content.</p>
-
-            </div>
-        </div>
-        <div class="card m-5" style="width: 18rem;">
-           <div class="card4 re4">
-         <div class="img"> <span></span><span></span><span></span><span></span></div>
-         <div class="content">
-             <h2>create resume</h2>
-             <a href="{% url 'resume4' %}" class="btn btn-primary">lets go!</a>
-         </div>
-     </div>
-            <div class="card-body">
-                <h5 class="card-title">Resume 4</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's
-                    content.</p>
-
-            </div>
-        </div>
-    </div>
 <h1>Report Templates</h1>
 <hr>
 <div class="d-flex m-5">

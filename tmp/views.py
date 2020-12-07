@@ -2,11 +2,19 @@ from django.shortcuts import render
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
 from django.shortcuts import redirect
+from tmp.forms import ContactForm
 from django.http import HttpResponse
+from django.core.mail import EmailMessage
+from django.conf import settings as conf_sett
 # Create your views here.
 def resume(request):
     return render(request,"tmp/resume.html")
 
+def resumebut(request):
+    return render(request,"tmp/resumebut.html")
+
+def repobut(request):
+    return render(request,"tmp/repobut.html")
 def aboutus(request):
     return render(request,"tmp/aboutus.html")
 
@@ -41,7 +49,7 @@ def login(request):
 
         if user is not None:
             auth.login(request,user)
-            return redirect("/")
+            return render(request,"tmp/i.html")
         else:
             messages.info(request,"Email or password is incorrect")
             return redirect("login")
@@ -69,3 +77,24 @@ def signup(request):
             return redirect('signup')
     else:
         return render(request,"tmp/signup.html")
+
+def contact(request):
+    form = ContactForm(request.POST or None)
+    if form.is_valid():
+        instance = form.save(commit=False)
+        name = instance.name
+        email = instance.email
+        message = instance.message
+
+        EmailMessage(
+            'New message from %s' %name,
+            'Hi admin, new message from this email address: %s\n\n Message: %s' %(email, message),
+            conf_sett.EMAIL_HOST_USER,
+            ['kulvir72510@gmail.com', ],
+        ).send()
+
+        form.save()
+        messages.info(request, "Message successfully sent")
+        return redirect('contact')
+    context = {'form': form}
+    return render(request, 'tmp/contact.html', context)

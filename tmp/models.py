@@ -8,3 +8,7 @@ class Meta:
     last_name = ("Last_name",)
     Phone = ("Phone",)
 
+class Contact(models.Model):
+    name = models.CharField(max_length=500)
+    email = models.EmailField()
+    message = models.TextField()
