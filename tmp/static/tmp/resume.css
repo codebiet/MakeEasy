@@ -5,7 +5,7 @@ body{
 .lefthalf{
     display: inline;
     width: 49%;
-    background-color: red;
+    background-color: #ffb366;
     float: left;
 
 }
@@ -34,9 +34,9 @@ body{
 .right_left{
     float: left;
     display: inline-block;
-    background-color: rgb(7, 7, 161);
+    background-color: #99ffff;
     width: 33%;
-    color: white;
+    color: black;
 
     text-align: center;
     height: 100%;
@@ -61,7 +61,7 @@ body{
     font-size: 20px;
 }
 .ntags{
-    background-color:#d3c5c5;
+    background-color:#4d88ff;
     font-size: 20px;
     display: inline-flex;
     width: 100%;
@@ -118,5 +118,5 @@ ul{
 }
 .dataa{
     display: block;
-    background-color: whitesmoke;
+    background-color: #e6ffff;
 }
