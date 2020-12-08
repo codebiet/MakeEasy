@@ -6,6 +6,7 @@ from tmp.forms import ContactForm
 from django.http import HttpResponse
 from django.core.mail import EmailMessage
 from django.conf import settings as conf_sett
+from django.contrib.auth import logout
 # Create your views here.
 def resume(request):
     return render(request,"tmp/resume.html")
@@ -49,7 +50,7 @@ def login(request):
 
         if user is not None:
             auth.login(request,user)
-            return render(request,"tmp/i.html")
+            return redirect("/")
         else:
             messages.info(request,"Email or password is incorrect")
             return redirect("login")
@@ -98,3 +99,8 @@ def contact(request):
         return redirect('contact')
     context = {'form': form}
     return render(request, 'tmp/contact.html', context)
+
+
+def logout_view(request):
+    logout(request)
+    return render(request, 'tmp/index.html')
