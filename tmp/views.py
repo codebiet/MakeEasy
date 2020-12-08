@@ -5,8 +5,10 @@ from django.shortcuts import redirect
 from tmp.forms import ContactForm
 from django.http import HttpResponse
 from django.core.mail import EmailMessage
+from django.core.mail import send_mail
 from django.conf import settings as conf_sett
 from django.contrib.auth import logout
+import random
 # Create your views here.
 
 def resume(request):
@@ -120,3 +122,46 @@ def contact(request):
 def logout_view(request):
     logout(request)
     return render(request, 'tmp/index.html')
+
+
+# password reset code
+def fgt():
+    return render(request,'tmp/fgtpsw.html')
+
+def chk(request):
+     if request.method == 'POST':
+         global mail
+        mail = request.POST['email']
+        user = auth.authenticate(username=email)
+        global otp
+        otp = store(random.randrange(100000, 999999))
+        sub = "Password reset"
+        message = f""" This is 6 digit code \n{otp.data[0]}\n This code valid for only 10 minutes """
+        send_mail(sub, message, EMAIL_HOST_USER,[email], fail_silently=False)
+        timer = threading.Timer(600.0,confcode)
+        timer.start()
+        return render(request,'tmp/confmail.html')
+    else:
+        return HttpResponse("<h1>No user exits in our data</h1>")
+
+# changes code to zero after 10 min
+def confcode():
+    otp = 00000000
+
+def confmail(request):
+    if request.method == "POST":
+        code = request.POST['code']
+        if code == str(otp):
+            return render(request,'tmp/chgpsw.html')
+    return HttpResponse("<h1>something fishiii!!!!!!</h1>")
+
+def chgpsw(request):
+    if request.method == "POST":
+        psw = request.POST['psw1']
+        psw2 = request.POST['psw2']
+        if psw == psw2 :
+            u = User.objects.get(username=mail)
+            u.set_password(psw)
+            u.save()
+            return render(request,'tmp/index,html')
+    return render("<h1> something went wrong </h1>")

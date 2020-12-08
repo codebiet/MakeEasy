@@ -1,0 +1,13 @@
+{% extends 'basic.html' %}
+{% block title %}Email verification{% endblock%}
+{% block body%}
+
+<h1>Enter 6 digit code</h1>
+<form method="post" action="{% url 'ccode'%}">{% csrf_token %}
+  <div class="form-group">
+    <label for="formGroupExampleInput">Code</label>
+    <input type="text" class="form-control" id="formGroupExampleInput" name="code" placeholder="code"
+  </div>
+   <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}

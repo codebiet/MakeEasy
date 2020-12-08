@@ -1,0 +1,21 @@
+{% extends 'basic.html' %}
+{% block title %}Change password {% endblock%}
+{% block body%}
+
+<h1>PASSWORD RECOVERY</h1>
+<form action="{% url 'user_mail'%}" method="post">{% csrf_token %}
+  <div class="form-group">
+    <label for="formGroupExampleInput">First name</label>
+    <input type="text" class="form-control"name="fname" id="formGroupExampleInput" placeholder="Username"
+  </div>
+  <div class="form-group">
+    <label for="formGroupExampleInput">Last name</label>
+    <input type="text" class="form-control"name="lname" id="formGroupExampleInput" placeholder="Username"
+  </div>
+  <div class="form-group">
+    <label for="formGroupExampleInput2">Email Address </label>
+    <input type="email" class="form-control" name="email" id="formGroupExampleInput2" placeholder="Email">
+  </div>
+   <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}
