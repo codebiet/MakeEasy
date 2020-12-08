@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="{%static 'tmp/resume2.css' %}">{%load static%}
     <script src="{%static 'tmp/jquery.js'%}"></script>{%load static%}
     <script src="{%static 'tmp/resume2.js'%}"></script>
+    <script src="{%static 'tmp/pdf.js'%}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
     {% endblock %}
     {% block title %} Resume-2 {% endblock %}
 
@@ -113,6 +115,7 @@
             <button id="63">Done</button>
         </div>
     </div>
+<div id="printpdf">
     <div class="righthalf">
         <div class="right_left">
             <div class="fullname">
@@ -167,10 +170,11 @@
         </div>
 
     </div>
+    </div>
     <!------some other animation and functionality--> 
     <div>
         <button id="custom">Customize Resume</button>
         <button id="res">Reset Resume</button>
-        <button id="Pr">Print Resume</button>
+        <button id="download">Print Resume</button>
     </div>
 {% endblock %}
