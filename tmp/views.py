@@ -8,8 +8,12 @@ from django.core.mail import EmailMessage
 from django.conf import settings as conf_sett
 from django.contrib.auth import logout
 # Create your views here.
+
 def resume(request):
-    return render(request,"tmp/resume.html")
+    if request.user.is_authenticated:
+        return render(request, "tmp/resume.html")
+    else:
+        return redirect("/")
 
 def resumebut(request):
     return render(request,"tmp/resumebut.html")
@@ -23,17 +27,29 @@ def resumehandler(request):
     return render(request,"tmp/resumehandler.html")
 
 def resume2(request):
-    return render(request,"tmp/resume2.html")
+    if request.user.is_authenticated:
+        return render(request, "tmp/resume2.html")
+    else:
+        return redirect("/")
 
 def resume3(request):
-    return render(request,"tmp/resume3.html")
+    if request.user.is_authenticated:
+        return render(request, "tmp/resume3.html")
+    else:
+        return redirect("/")
 
 def resume4(request):
-    return render(request,"tmp/resume4.html")
+    if request.user.is_authenticated:
+        return render(request, "tmp/resume4.html")
+    else:
+        return redirect("/")
 
 
 def report(request):
-    return render(request,"tmp/report.html")
+    if request.user.is_authenticated:
+        return render(request, "tmp/report.html")
+    else:
+        return redirect("/")
 
 def index(request):
     return render(request,"tmp/index.html")

@@ -21,4 +21,5 @@ urlpatterns = [
     path('resumebut/',views.resumebut,name ="resumebut"),
     path('repobut/',views.repobut,name ="repobut"),
     path('logout/',views.logout_view,name ="logout"),
+
 ]
