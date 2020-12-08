@@ -20,7 +20,11 @@
          <div class="img"> <span></span><span></span><span></span><span></span></div>
          <div class="content">
              <h4>Create Report</h4>
+             {% if user.is_authenticated %}
              <a href="{% url 'report' %}" class="btn btn-primary">Lets go!</a>
+             {% else %}
+             <a href="{% url 'login' %}" class="btn btn-primary">Lets go!</a>
+             {% endif %}
          </div>
      </div>
             <div class="card-body">

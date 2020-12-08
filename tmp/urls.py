@@ -1,5 +1,9 @@
 from django.urls import path
 from . import views
+from django.conf.urls import url
+from django.conf import settings
+from django.contrib.auth.views import auth_logout
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('',views.index,name = "index"),
@@ -16,4 +20,6 @@ urlpatterns = [
     path('resumehandler/',views.resumehandler,name ="resumehandler"),
     path('resumebut/',views.resumebut,name ="resumebut"),
     path('repobut/',views.repobut,name ="repobut"),
+    path('logout/',views.logout_view,name ="logout"),
+
 ]
