@@ -1,6 +1,6 @@
-{% extends 'basic.html' %}
-{% block title %}Change password {% endblock%}
-{% block body%}
+{% extends 'tmp/basic.html' %}
+{% block title %}Change password {% endblock %}
+{% block body %}
 
 <h1>PASSWORD RECOVERY</h1>
 <form action="{% url 'user_mail'%}" method="post">{% csrf_token %}

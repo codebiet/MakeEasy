@@ -21,9 +21,9 @@ urlpatterns = [
     path('resumebut/',views.resumebut,name ="resumebut"),
     path('repobut/',views.repobut,name ="repobut"),
     path('logout/',views.logout_view,name ="logout"),
-    path('fgt/',views.fgt,name="forget"),
-    path('check'views.chk,name= 'user_mail')
-    path('codeget/',views.confmail,name='ccode')
-    path('chgpsw/',views.chgpsw,name='chgpsw')
+    path('fgt/', views.fgt,name="forget"),
+    path('check',views.chk, name = 'user_mail'),
+    path('codeget/', views.confmail, name='ccode'),
+    path('chgpsw/', views.chgpsw, name='chgpsw'),
 
 ]
