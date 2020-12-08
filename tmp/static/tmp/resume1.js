@@ -7,6 +7,7 @@ $(document).ready(function(){
     $(".edu").hide();
     $(".cer").hide();
     $(".ins").hide();
+    $(".b10").hide();
 
     $("#b1").click(function(){
         $(".skg").show();
@@ -43,7 +44,8 @@ $(document).ready(function(){
     $("#b9").click(function(){
         $(".lefthalf").hide();
         $(".righthalf").css({"width":"100%", "display":"block"});
-        $("ul").css("margin-left","10%")
+        $("ul").css("margin-left","10%");
+        $(".b10").show();
     });
 
     /*functioning html*/
