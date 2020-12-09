@@ -1,0 +1,122 @@
+body{
+    display: block;
+}
+/*left part*/
+.lefthalf{
+    display: inline;
+    width: 49%;
+    background-color: #ffb366;
+    float: left;
+
+}
+.self_info input, .SKILLS input, .Sft input,.slng input{
+    margin: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 80%;
+    height: 32px;
+}
+.self_info label, .SKILLS label, .Sft label, .slng label{
+    display: block;
+    font-size: 30px;
+    color: black;
+}
+
+/* right part */
+ .righthalf{
+      display: inline;
+      width: 49%;
+
+      float: right;
+}
+.right_left{
+    float: left;
+    display: inline-block;
+    background-color: #99ffff;
+    width: 33%;
+    color: black;
+
+    text-align: center;
+    height: 100%;
+}
+.right_right{
+    float: right;
+    background-color: whitesmoke;
+    display: inline-block;
+    width: 67%;
+    height: 100%;/*change here to  make good*/
+}
+.fullname{
+    font-size: 30px;
+    margin-left: 10px;
+}
+.btags{
+    margin-left: 10px;
+}
+
+
+.mtags{
+    font-size: 20px;
+}
+.ntags{
+    background-color:#4d88ff;
+    font-size: 20px;
+    display: inline-flex;
+    width: 100%;
+}
+.defig input{
+    margin: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 80%;
+    height: 100px;
+}
+.expig input, .edug input, .cerg input, .insg input{
+     margin: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 80%;
+    height: 32px;
+}
+
+.expig label,.edug label, .cerg label, .insg label{
+     display: block;
+    font-size: 30px;
+    color: white;
+}
+
+button{
+    background-color: rgb(10, 24, 218);
+    color: whitesmoke;
+    width: 155px;
+    height: 32px;
+    border-radius: 10px;
+}
+
+ul{
+    margin-left: 18%;
+}
+.datal{
+    float: left;
+    width: 25%;
+    background-color: whitesmoke;
+    height: auto;
+    display: inline;
+}
+.datar{
+    float: right;
+    width: 75%;
+    background-color: whitesmoke;
+    height: auto;
+    display: inline;
+}
+.dataa{
+    display: block;
+    background-color: #e6ffff;
+}

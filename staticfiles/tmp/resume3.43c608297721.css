@@ -1,0 +1,70 @@
+*{
+    font-size:14px
+}
+body{
+ align-content: center;   
+}
+.topmost{
+    display: block;
+    font-size: 12px;
+    
+}
+.king{
+    display:  block;
+    padding:5% 10%;
+}
+.heading{
+    font-size:12px;
+    color:rgba(30, 80, 138, 0.842);
+    font-weight: bold;
+}
+.Fullname{
+    font-size: 32px;
+    color:black;
+    font-weight: bold;
+}
+[contenteditable]{
+    outline: 0px solid transparent;
+}
+.datecmp{
+    color: rgba(100,100,100,0.7);
+}
+.Upper{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.bottom{
+    display: inline-block;
+    width: 100%;
+    height: auto;
+}
+.info{
+    display: inline-block;
+    width: 58.32%;
+}
+.more_info{
+    display: inline-block;
+    width: 29.16%;
+    float: right;
+}
+.b_left{
+    display:block;
+    width: 58.32%;
+    float: left;
+}
+.b_right{
+    display: block;
+    width: 29.16%;
+    float: right;
+}
+button{
+    background-color:orange;
+    width: auto;
+    height: 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.cval,.cval1,.cval2,.cval3,.fval,.fval1,.fval2{
+    background-color: pink;
+}

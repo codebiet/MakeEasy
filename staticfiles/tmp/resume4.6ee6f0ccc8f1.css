@@ -1,0 +1,51 @@
+body{
+    padding:0% 10%;
+}
+.head{
+    display: block;
+    background-color: grey;
+    text-align: center;
+}
+.fullname{
+      border: 3px solid orange;
+      width: 50%;
+      margin:auto;
+      padding: 0% 5%;
+      font-size: 32px;
+      font-weight: bold;
+      background-color: white;
+}
+.fname{
+    color:rgba(0, 0, 0, 0.76);
+}
+.lname{
+    color: rgba(255, 166, 0, 0.87);
+}
+.about{
+    padding-top:10px;
+    padding-bottom: 10px;
+    font-size:20px
+}
+.left{
+    display: block;
+    float: left;
+    width: 33.33%;
+    border-right: 3px solid orange ;
+    padding-right: 2%;
+    text-align: right;
+}
+.right{
+    display: block;
+    float: right;
+    padding-left:2% ;   
+    width:58.66%;
+    text-align: left;
+}
+.heading{
+    font-weight: bold;
+    display: block;
+    right: 0;
+}
+[contenteditable]{
+    outline: 0px solid ;
+}

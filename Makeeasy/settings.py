@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'Makeeasy.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
@@ -127,10 +127,10 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
-
-STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = 'static/'
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
+    BASE_DIR / "tmp\\static",
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'

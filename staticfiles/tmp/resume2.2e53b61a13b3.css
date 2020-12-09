@@ -1,0 +1,103 @@
+*{
+    font-family: "Times New Roman ", 'Times New Roman', Times, serif ;
+}
+body{
+    display: block;
+}
+/*left part*/
+.lefthalf{
+    display: inline;
+    width: 49%;
+    background-color: rgb(49, 226, 203);
+    float: left;
+}
+.self_info label,.objff label,.eduff label,.expff label,.sklff label,.actff label{
+    color:white;
+    font-size: 26px;
+    display: block;
+}
+.self_info input,.objff input,.eduff input,.expff input,.sklff input,.actff input{
+    border-radius: 10px;
+    width: 80%;
+    height: 30px;
+}
+.objff input,.actff input, .sklff input{
+    height: 80px;
+}
+button{
+    margin:10px;
+    background-color: rgb(125, 83, 204);
+    border-radius: 10px;
+    height: 40px;
+    width: 30%;
+    font-size: 18px;
+    color: white;
+}
+/* right part */
+ .righthalf{
+      display: inline;
+      width: 49%;
+      float: right;
+}
+.right_left{
+    display: inline-block;
+    width: 100%;
+    background-color: rgba(199, 187, 187, 0.253);
+}
+.fullname{
+     font-size: 32px;
+     margin-left: 8px;
+    color:black;
+    float: left;
+    display: block;
+}
+
+.btags{
+    display: block;
+    float: right;
+    font-size : 12px;
+}
+.right_right{
+    display: block;
+    width:100%;
+    margin:auto;
+    background-color: white;
+}
+.ntags{
+    font-size:18px;
+    margin-left: 5px;
+}
+
+.datals{
+ display: inline;
+ width: 50%;
+ float: left;
+}
+.datars{
+    display: inline;
+    width: 50%;
+    float: right;
+}
+.dataa{
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+    font-size: 18px;
+}
+.colr{
+    display: inline;
+    background-color: orange;
+    float: left;
+    width: 30%;
+}
+.colf label{
+    color: white;
+    font-size: 18px;
+} 
+.colf input{
+    width: 80%;
+    margin:auto;
+    border-radius: 10px;
+    height:30px
+}
