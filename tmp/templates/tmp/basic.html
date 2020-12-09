@@ -13,6 +13,10 @@
       {% block head %} {% endblock%}
 
     <title>{% block title %} {% endblock %}</title>
+      {% load static%}
+    <link rel = "icon" href =
+"{% static 'tmp/photos/logo.png' %}"
+        type = "image/x-icon">
   </head>
   <body>
   {% if user.is_authenticated %}
