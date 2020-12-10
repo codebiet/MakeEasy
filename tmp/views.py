@@ -26,6 +26,7 @@ def resumebut(request):
 
 def repobut(request):
     return render(request,"tmp/repobut.html")
+
 def aboutus(request):
     return render(request,"tmp/aboutus.html")
 
@@ -58,13 +59,17 @@ def report(request):
         return redirect("/")
 
 def index(request):
+    count = User.objects.all().count()
     if request.user.is_authenticated:
         u=User.objects.get(username=request.user)
         n="Hi !! " + u.first_name + " " + u.last_name
-        context = {'name': n}
+        context = {'name': n, 'total': count}
         return render(request, "tmp/index.html",context)
     else:
-        return render(request,"tmp/index.html")
+        context = {'total': count}
+        return render(request,"tmp/index.html",context)
+
+
 
 def temp(request):
     return render(request,"tmp/temp.html")
