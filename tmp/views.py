@@ -58,7 +58,13 @@ def report(request):
         return redirect("/")
 
 def index(request):
-    return render(request,"tmp/index.html")
+    if request.user.is_authenticated:
+        u=User.objects.get(username=request.user)
+        n="Hi !! " + u.first_name + " " + u.last_name
+        context = {'name': n}
+        return render(request, "tmp/index.html",context)
+    else:
+        return render(request,"tmp/index.html")
 
 def temp(request):
     return render(request,"tmp/temp.html")
