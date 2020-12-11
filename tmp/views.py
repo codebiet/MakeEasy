@@ -63,7 +63,8 @@ def index(request):
     if request.user.is_authenticated:
         u=User.objects.get(username=request.user)
         n="Hi !! " + u.first_name + " " + u.last_name
-        context = {'name': n, 'total': count}
+        e = u.username
+        context = {'name': n, 'total': count,'email':e}
         return render(request, "tmp/index.html",context)
     else:
         context = {'total': count}
@@ -148,17 +149,20 @@ def fgt(request):
 
 def chk(request):
      if request.method == 'POST':
-                    global mail
-                    mail = request.POST['email']
-                    user = auth.authenticate(username=email)
-                    global otp
-                    otp = random.randrange(100000, 999999)
-                    sub = "Password reset"
-                    message = f""" This is 6 digit code \n{otp}\n This code valid for only 10 minutes """
-                    send_mail(sub, message, 'official.kulvir92@gmail.com',[mail], fail_silently=False)
-                    timer = threading.Timer(600.0,confcode)
-                    timer.start()
-                    return render(request,'tmp/confmail.html')
+        global mail
+        mail = request.POST['email']
+        user = User.objects.get(username = mail)
+        if user is not None:
+            global otp
+            otp = random.randrange(100000, 999999)
+            sub = "Password reset"
+            message = f""" This is 6 digit code \n{otp}\n This code valid for only 10 minutes """
+            send_mail(sub, message, 'official.kulvir92@gmail.com',[mail], fail_silently=False)
+            timer = threading.Timer(600.0,confcode)
+            timer.start()
+            return render(request,'tmp/confmail.html')
+        else:
+            return HttpResponse('<h1>No user exits in our data</h1>')
      else:
         return HttpResponse('<h1>No user exits in our data</h1>')
 
@@ -169,17 +173,17 @@ def confcode():
 def confmail(request):
     if request.method == "POST":
         code = request.POST['code']
-        if code == str("otp"):
+        if code == str(otp):
             return render(request,'tmp/chgpsw.html')
-    return HttpResponse("<h1>something fishiii!!!!!!</h1>")
+        return HttpResponse("<h1>something fishiii!!!!!!</h1>")
 
 def chgpsw(request):
     if request.method == "POST":
         psw = request.POST['psw1']
         psw2 = request.POST['psw2']
         if psw == psw2 :
-            u = User.objects.get(username=email)
+            u = User.objects.get(username=mail)
             u.set_password(psw)
             u.save()
-            return render(request,'tmp/index,html')
+            return render(request,'tmp/index.html')
     return render("<h1> something went wrong </h1>")
