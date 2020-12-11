@@ -3,6 +3,7 @@ import threading
 
 from django.shortcuts import render
 from django.contrib.auth.models import User, auth
+from .models import Visitors
 from django.contrib import messages
 from django.shortcuts import redirect
 from tmp.forms import ContactForm
@@ -11,6 +12,7 @@ from django.core.mail import EmailMessage
 from django.core.mail import send_mail
 from django.conf import settings as conf_sett
 from django.contrib.auth import logout
+from django.db.models import Q
 import random
 import os
 # Create your views here.
@@ -60,14 +62,35 @@ def report(request):
 
 def index(request):
     count = User.objects.all().count()
+    def get_ip(request):
+        address = request.META.get('HTTP_X_FORWARDED_FOR')
+        if address:
+            ip = address.split(',')[-1].strip()
+        else:
+            ip = request.META.get('REMOTE_ADDR')
+        return ip
+
+    ip = get_ip(request)
+    u = Visitors(visitor=ip)
+    result = Visitors.objects.filter(Q(visitor__icontains=ip))
+
+    if len(result) == 1:
+        print("user exist")
+    elif len(result)>1:
+        print("user exist more")
+    else:
+        u.save()
+        print("user is unique")
+
+    x = Visitors.objects.all().count()
     if request.user.is_authenticated:
         u=User.objects.get(username=request.user)
         n="Hi !! " + u.first_name + " " + u.last_name
         e = u.username
-        context = {'name': n, 'total': count,'email':e}
+        context = {'name': n, 'total': count,'email':e,'x':x}
         return render(request, "tmp/index.html",context)
     else:
-        context = {'total': count}
+        context = {'total': count,'x':x}
         return render(request,"tmp/index.html",context)
 
 
