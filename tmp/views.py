@@ -209,4 +209,4 @@ def chgpsw(request):
             u.set_password(psw)
             u.save()
             return render(request,'tmp/index.html')
-    return render("<h1> something went wrong </h1>")
+    return HttpResponse("<h1> something went wrong </h1>")
